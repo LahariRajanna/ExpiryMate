@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1034746156873",
+    "project_id": "expirymate-7c1ce",
+    "storage_bucket": "expirymate-7c1ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034746156873:android:5bd965f240e2b479982c98",
+        "android_client_info": {
+          "package_name": "com.example.expirymate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy_-2NRYZHkPZJ8s6yax-GFx28gCV_Wuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

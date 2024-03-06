@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainPageActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="ExpiryMate"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/userloginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginTop="20dp"
+            android:text="User Login"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/newuserbutton"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginTop="20dp"
+            android:text="New User"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/gobackbutton"
+            android:layout_width="match_parent"
+            android:layout_height="200px"
+            android:layout_marginTop="20dp"
+            android:text="Go Back"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
