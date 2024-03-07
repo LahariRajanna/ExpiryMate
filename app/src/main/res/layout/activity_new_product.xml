@@ -164,6 +164,8 @@
                 android:layout_marginLeft="15dp"
                 android:text="Manufacture Date"
                 android:textStyle="bold"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
@@ -204,6 +206,8 @@
                 android:layout_marginLeft="15dp"
                 android:text="Expiry Date"
                 android:textStyle="bold"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
@@ -264,8 +268,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/roundbutton"
-            android:text="New Product" />
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"            android:text="New Product" />
 
         <Button
             android:id="@+id/gobackbutton"
@@ -273,8 +277,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/roundbutton"
-            android:text="Go Back" />
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"            android:text="Go Back" />
     </LinearLayout>
 </ScrollView>
 

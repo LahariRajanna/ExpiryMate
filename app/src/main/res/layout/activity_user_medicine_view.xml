@@ -55,6 +55,8 @@
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:background="@drawable/roundbutton"
                 android:layout_marginTop="20dp"
                 android:text="CLICK TO VIEW Medicines" />

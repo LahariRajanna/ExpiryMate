@@ -190,6 +190,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/roundedtextview"
                 android:ems="10"
+                android:hint="Bengaluru"
                 android:inputType="textMultiLine" />
 
             <TextView
@@ -262,7 +263,8 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/roundbutton"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:text="New Customer" />
 
             <Button
@@ -271,7 +273,8 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/roundbutton"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:text="Go Back" />
 
 

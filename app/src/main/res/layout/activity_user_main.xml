@@ -45,6 +45,9 @@
             android:background="@drawable/roundbutton"
             android:layout_marginTop="100dp"
             android:layout_marginLeft="120dp"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
+
             android:text="New Product" />
 
         <Button
@@ -53,8 +56,10 @@
             android:layout_height="75dp"
             android:background="@drawable/roundbutton"
             android:layout_marginTop="20dp"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:layout_marginLeft="120dp"
-            android:text="VIEW PRODUCTS" />
+            android:text="View Products" />
 
         <Button
             android:id="@+id/newmedicinebutton"
@@ -62,6 +67,8 @@
             android:layout_width="150dp"
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:layout_marginLeft="120dp"
             android:text="New Medicine" />
 
@@ -71,6 +78,8 @@
             android:layout_width="150dp"
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:layout_marginLeft="120dp"
             android:text="View Medicines" />
 
@@ -81,6 +90,8 @@
             android:layout_height="75dp"
             android:layout_marginLeft="120dp"
             android:layout_marginTop="20dp"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:text="LOGOUT" />
     </LinearLayout>
 

@@ -30,31 +30,35 @@
             android:textSize="40sp"
             android:textStyle="bold" />-->
 
+        <!--ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="270dp"
+            android:layout_height="342dp"
+            android:layout_marginLeft="40dp"
+
+            app:srcCompat="@drawable/expiry" /-->
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="48sp"
             android:layout_marginTop="35sp"
-            android:text="EXPRIYMATE"
+            android:fontFamily="@font/rajdhanimedium"
+            android:text="ExpiryMate"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="70sp"
+            android:layout_marginStart="27sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="270dp"
-            android:layout_height="342dp"
-            android:layout_marginLeft="40dp"
-
-            app:srcCompat="@drawable/expiry" />
-
-            <Button
+        <Button
                 android:id="@+id/btnClick"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="100dp"
                 android:text="Click to Open"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
                 android:textStyle="bold" />
 
             <Button
@@ -62,6 +66,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="20dp"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:text="Exit"
                 android:textStyle="bold" />
 

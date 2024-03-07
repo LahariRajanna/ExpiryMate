@@ -131,6 +131,9 @@
                 <Button
                     android:id="@+id/MfgDateBtn"
                     android:layout_width="150dp"
+                    android:textSize="19dp"
+                    android:fontFamily="@font/rajdhanibold"
+
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginLeft="15dp"
@@ -175,6 +178,9 @@
                     android:layout_marginLeft="15dp"
                     android:text="Expiry Date"
                     android:textStyle="bold"
+                    android:textSize="19dp"
+                    android:fontFamily="@font/rajdhanibold"
+
                     android:textAppearance="?android:textAppearanceMedium"
                     android:textColor="@color/white"
                     android:layout_gravity="center"
@@ -207,7 +213,8 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/roundbutton"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:text="Delete Medicine" />
 
             <Button
@@ -216,8 +223,9 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/roundbutton"
-                android:text="Update Product" />
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
+                android:text="Update Medicine" />
 
             <Button
                 android:id="@+id/gobackbutton"
@@ -225,7 +233,8 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/roundbutton"
+                android:textSize="19dp"
+                android:fontFamily="@font/rajdhanibold"
                 android:text="Go Back" />
         </LinearLayout>
     </ScrollView>

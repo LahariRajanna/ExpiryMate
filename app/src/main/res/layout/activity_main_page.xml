@@ -36,6 +36,9 @@
             android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:text="User Login"
+            android:background="@drawable/roundbutton"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:textStyle="bold" />
 
         <Button
@@ -44,6 +47,9 @@
             android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:text="New User"
+            android:background="@drawable/roundbutton"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:textStyle="bold" />
 
         <Button
@@ -52,6 +58,9 @@
             android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:text="Go Back"
+            android:background="@drawable/roundbutton"
+            android:textSize="19dp"
+            android:fontFamily="@font/rajdhanibold"
             android:textStyle="bold" />
 
     </LinearLayout>
