@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".UserViewMedicineActivity">
 
     <ScrollView
@@ -31,8 +31,10 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:textStyle="bold"
+                android:fontFamily="@font/rajdhanisemibold"
                 android:textColor="@color/black"
-                android:text="View Medicine Details Page"
+                android:textSize="40dp"
+                android:text="Medicine Details "
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
@@ -42,6 +44,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Medicine Name"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rajdhaniregular"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -51,6 +57,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:hint="Dolo, Citrizen"
+                android:fontFamily="@font/rajdhaniregular"
+
                 android:background="@drawable/roundedtextview"
                 android:ems="10"></EditText>
 
@@ -61,6 +69,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Medicine Type"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rajdhaniregular"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
@@ -79,6 +91,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Medicine Quantity"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rajdhaniregular"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <EditText
@@ -90,6 +106,8 @@
                 android:hint="1,2,etc"
                 android:background="@drawable/roundedtextview"
                 android:ems="10"
+                android:fontFamily="@font/rajdhaniregular"
+
                 android:inputType="number"></EditText>
 
             <!--<TextView
@@ -122,10 +140,12 @@
                     android:layout_width="200dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="20dp"
-                    android:hint="Choose from the calender"
+                    android:hint="Manufacture Date"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/roundedtextview"
                     android:ems="10"
+                    android:fontFamily="@font/rajdhaniregular"
+
                     android:inputType="date" />
 
                 <Button
@@ -145,15 +165,6 @@
                     android:background="@drawable/roundbutton"/>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="Expiry Date"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,7 +178,9 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/roundedtextview"
                     android:ems="10"
-                    android:hint="Choose from the calender"
+                    android:fontFamily="@font/rajdhaniregular"
+
+                    android:hint="Expiry Date"
                     android:inputType="date" />
 
                 <Button
@@ -193,6 +206,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Instructions"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rajdhaniregular"
                 android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 
@@ -204,6 +221,8 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/roundedtextview"
                 android:ems="10"
+                android:fontFamily="@font/rajdhaniregular"
+
                 android:hint="type, restrictions,etc"
                 android:inputType="textMultiLine" />
 
@@ -214,6 +233,8 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:textSize="19dp"
+                android:background="@drawable/roundbutton"
+                android:textColor="@color/white"
                 android:fontFamily="@font/rajdhanibold"
                 android:text="Delete Medicine" />
 
@@ -224,6 +245,8 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:textSize="19dp"
+                android:background="@drawable/roundbutton"
+                android:textColor="@color/white"
                 android:fontFamily="@font/rajdhanibold"
                 android:text="Update Medicine" />
 
@@ -234,6 +257,8 @@
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:textSize="19dp"
+                android:background="@drawable/roundbutton"
+                android:textColor="@color/white"
                 android:fontFamily="@font/rajdhanibold"
                 android:text="Go Back" />
         </LinearLayout>

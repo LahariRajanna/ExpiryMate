@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".NewProductActivity">
 
 <ScrollView
@@ -61,6 +61,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:text="Product Name"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rajdhaniregular"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
@@ -80,6 +84,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:text="Product Type"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rajdhaniregular"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
@@ -98,6 +106,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:text="Product Quantity"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rajdhaniregular"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
@@ -131,15 +143,6 @@
             android:maxLength="10"
             android:inputType="phone" />-->
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Manufacture Date"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -151,7 +154,7 @@
                 android:layout_height="48dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:hint="Choose from the calender"
+                android:hint="Manufacture Date"
                 android:background="@drawable/roundedtextview"
                 android:ems="10"
                 android:inputType="date" />
@@ -173,14 +176,6 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:text="Expiry Date"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -195,7 +190,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/roundedtextview"
                 android:ems="10"
-                android:hint="Choose from the calender"
+                android:hint="Expiry Date"
                 android:inputType="date" />
 
             <Button
@@ -248,6 +243,10 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:text="Instruction"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rajdhaniregular"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 
@@ -259,7 +258,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/roundedtextview"
             android:ems="10"
-            android:hint="Any instructions"
+            android:hint="Any instructions/descriptions"
             android:inputType="textMultiLine" />
 
         <Button
@@ -269,7 +268,10 @@
             android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
             android:textSize="19dp"
-            android:fontFamily="@font/rajdhanibold"            android:text="New Product" />
+            android:background="@drawable/roundbutton"
+            android:textColor="@color/white"
+            android:fontFamily="@font/rajdhanibold"
+            android:text="New Product" />
 
         <Button
             android:id="@+id/gobackbutton"
@@ -278,6 +280,8 @@
             android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
             android:textSize="19dp"
+            android:background="@drawable/roundbutton"
+            android:textColor="@color/white"
             android:fontFamily="@font/rajdhanibold"            android:text="Go Back" />
     </LinearLayout>
 </ScrollView>

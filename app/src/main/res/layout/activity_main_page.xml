@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".MainPageActivity">
 
     <LinearLayout
@@ -19,15 +19,26 @@
         android:paddingRight="24dp"
         android:textAlignment="center">
 
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_account_circle_24"
+            />
+
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="27sp"
+            android:layout_marginLeft="48sp"
+            android:layout_marginTop="35sp"
+            android:fontFamily="@font/rajdhanimedium"
             android:text="ExpiryMate"
-            android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="70sp"
+            android:layout_marginBottom="35dp"
             android:textStyle="bold" />
 
         <Button
@@ -36,7 +47,8 @@
             android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:text="User Login"
-            android:background="@drawable/roundbutton"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
             android:textStyle="bold" />
@@ -47,7 +59,8 @@
             android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:text="New User"
-            android:background="@drawable/roundbutton"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
             android:textStyle="bold" />
@@ -58,7 +71,8 @@
             android:layout_height="200px"
             android:layout_marginTop="20dp"
             android:text="Go Back"
-            android:background="@drawable/roundbutton"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
             android:textStyle="bold" />

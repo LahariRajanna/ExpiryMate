@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -14,7 +14,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="-5dp"
         android:orientation="vertical"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
@@ -30,34 +29,39 @@
             android:textSize="40sp"
             android:textStyle="bold" />-->
 
-        <!--ImageView
+        <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="270dp"
-            android:layout_height="342dp"
+            android:layout_width="247dp"
+            android:layout_height="250dp"
             android:layout_marginLeft="40dp"
+android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/expiry" />
 
-            app:srcCompat="@drawable/expiry" /-->
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="27sp"
             android:layout_marginLeft="48sp"
             android:layout_marginTop="35sp"
             android:fontFamily="@font/rajdhanimedium"
             android:text="ExpiryMate"
             android:textColor="@color/black"
             android:textSize="70sp"
-            android:layout_marginStart="27sp"
+android:layout_marginBottom="35dp"
             android:textStyle="bold" />
 
         <Button
                 android:id="@+id/btnClick"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="0dp"
                 android:text="Click to Open"
             android:textSize="19dp"
+
+            android:textColor="@color/white"
+            android:background="@drawable/roundbutton"
             android:fontFamily="@font/rajdhanibold"
                 android:textStyle="bold" />
 
@@ -67,6 +71,8 @@
                 android:layout_height="75dp"
                 android:layout_marginTop="20dp"
                 android:textSize="19dp"
+                android:background="@drawable/roundbutton"
+                android:textColor="@color/white"
                 android:fontFamily="@font/rajdhanibold"
                 android:text="Exit"
                 android:textStyle="bold" />

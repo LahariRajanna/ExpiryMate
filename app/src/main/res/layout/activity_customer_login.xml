@@ -4,79 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:gravity="center"
+    android:background="@drawable/bg"
     tools:context=".CustomerLoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="43dp"
-            android:text="Customer Login Page"
-
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextusername"
-            android:layout_below="@+id/textView1"
-            android:layout_marginTop="10dp"
-            android:text="Username"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <EditText
-            android:id="@+id/editTextusername"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/roundedtextview"
-            android:ems="10"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:hint="Enter Login Name">
-
-            <requestFocus />
-        </EditText>
+            android:fontFamily="@font/rajdhanisemibold"
+            android:gravity="center"
+            android:text=" Welcome Back! "
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="40dp" />
 
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextusername"
-            android:layout_below="@+id/editTextusername"
-            android:layout_marginTop="14dp"
-            android:text="Password"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <!--ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/baseline_account_circle_24"
+            /-->
 
-        <EditText
-            android:id="@+id/editTextpassword"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_below="@+id/textView3"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/roundedtextview"
-            android:ems="10"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:hint="Enter Password"
-            android:inputType="textPassword" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="342dp"
+            android:layout_height="298dp"
+            android:layout_margin="30dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <!--TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:layout_alignLeft="@+id/editTextusername"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Username"
+                    android:textAppearance="?android:attr/textAppearanceMedium" /-->
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/rajdhanisemibold"
+                    android:gravity="center"
+                    android:text=" Login "
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="40dp" />
+
+                <EditText
+                    android:id="@+id/editTextusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/roundedtextview"
+                    android:ems="10"
+                    android:hint="Enter Username">
+
+                    <requestFocus />
+                </EditText>
+
+
+                <!--TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextusername"
+                    android:layout_alignLeft="@+id/editTextusername"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Password"
+                    android:textAppearance="?android:attr/textAppearanceMedium" /-->
+
+                <EditText
+                    android:id="@+id/editTextpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/textView3"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/roundedtextview"
+                    android:ems="10"
+                    android:hint="Enter Password"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <Button
             android:id="@+id/buttonlogin"
@@ -86,7 +126,10 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="34dp"
             android:fontFamily="@font/rajdhanibold"
-            android:text="Customer Login"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:background="@drawable/roundbutton"
+            android:layout_marginStart="2dp"
             android:textSize="19dp" />
 
         <Button
@@ -96,6 +139,9 @@
             android:layout_height="75dp"
             android:layout_marginTop="20dp"
             android:textSize="19dp"
+            android:textColor="@color/white"
+            android:background="@drawable/roundbutton"
+            android:layout_marginStart="2dp"
             android:fontFamily="@font/rajdhanibold"
             android:layout_marginBottom="34dp"
             android:text="Go Back" />

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     android:layout_height="match_parent"
     tools:context=".UserProductViewActivity">
 
@@ -24,9 +24,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="User View Products Page"
+                android:text="View Products Page"
                 android:textSize="40dp"
+                android:layout_marginTop="29dp"
                 android:textStyle="bold"
+                android:fontFamily="@font/rajdhanimedium"
                 android:textColor="@color/black"
                 android:gravity="center"/>
 
@@ -37,6 +39,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:text="Product Type"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/rajdhaniregular"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
@@ -54,7 +60,8 @@
                 android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:background="@drawable/roundbutton"
+                android:background="@drawable/squarebutton"
+                android:textColor="@color/white"
                 android:layout_marginTop="20dp"
                 android:textSize="19dp"
                 android:fontFamily="@font/rajdhanibold"
@@ -72,7 +79,10 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:textSize="19dp"
                 android:background="@drawable/roundbutton"
+                android:textColor="@color/white"
+                android:fontFamily="@font/rajdhanibold"
                 android:text="Go Back" />
 
         </LinearLayout>

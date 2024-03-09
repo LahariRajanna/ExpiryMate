@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/bg"
     tools:context=".UserMainActivity">
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/collegelogo" />-->
-        <TextView
+        <!--TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="User Main Page"
@@ -25,7 +25,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="20dp"
-            android:gravity="center"/>
+            android:gravity="center"/-->
 
         <!--
             <Button
@@ -40,58 +40,67 @@
         -->
         <Button
             android:id="@+id/newproductbutton"
-            android:layout_width="150dp"
+            android:layout_marginTop="150dp"
+            android:layout_width="300dp"
             android:layout_height="75dp"
-            android:background="@drawable/roundbutton"
-            android:layout_marginTop="100dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
-
+            android:textStyle="bold"
             android:text="New Product" />
 
         <Button
             android:id="@+id/viewproductbutton"
-            android:layout_width="150dp"
+            android:layout_width="300dp"
             android:layout_height="75dp"
-            android:background="@drawable/roundbutton"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
-            android:layout_marginLeft="120dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
             android:text="View Products" />
 
         <Button
             android:id="@+id/newmedicinebutton"
-            android:background="@drawable/roundbutton"
-            android:layout_width="150dp"
+            android:layout_width="300dp"
             android:layout_height="75dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
-            android:layout_marginLeft="120dp"
+            android:textStyle="bold"
             android:text="New Medicine" />
 
         <Button
             android:id="@+id/viewmedicinebutton"
-            android:background="@drawable/roundbutton"
-            android:layout_width="150dp"
+            android:layout_width="300dp"
             android:layout_height="75dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
-            android:layout_marginLeft="120dp"
+            android:textStyle="bold"
             android:text="View Medicines" />
 
         <Button
             android:id="@+id/gobackbutton"
-            android:background="@drawable/roundbutton"
-            android:layout_width="150dp"
+            android:layout_width="300dp"
             android:layout_height="75dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/squarebutton"
+            android:textColor="@color/white"
             android:textSize="19dp"
             android:fontFamily="@font/rajdhanibold"
+            android:textStyle="bold"
             android:text="LOGOUT" />
     </LinearLayout>
 
