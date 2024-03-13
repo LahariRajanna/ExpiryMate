@@ -172,7 +172,6 @@
                     android:background="@drawable/roundedtextview"
                     android:ems="10"
                     android:hint="Manufacture Date"
-
                     android:inputType="date" />
 
                 <Button

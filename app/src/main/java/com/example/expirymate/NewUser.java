@@ -70,12 +70,21 @@ public class NewUser {
         this.password = password;
     }
 
-    public String getEmailid() {
+   public String getEmailid() {
         return emailid;
     }
 
     public void setEmailid(String emailid) {
         this.emailid = emailid;
+    }
+
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhonenum() {
@@ -86,13 +95,7 @@ public class NewUser {
         this.phonenum = phonenum;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public String getGender() {
         return gender;

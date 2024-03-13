@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View Medicines Page"
+                android:text="View/Edit Medicines"
                 android:textSize="40dp"
                 android:layout_marginTop="29dp"
                 android:textStyle="bold"

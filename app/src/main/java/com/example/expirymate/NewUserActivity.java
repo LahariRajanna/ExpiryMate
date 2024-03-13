@@ -34,7 +34,7 @@ public class NewUserActivity extends AppCompatActivity {
     private Button newbtn, gobackbtn;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
-    private Boolean flag = false;
+    private int duplicatesFound = 0;
 
     //Accept Only Alphabet in EditText
     public static InputFilter acceptonlyAlphabetValuesnotNumbersMethod() {
@@ -79,26 +79,24 @@ public class NewUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
 
-        fnametxt = (EditText) findViewById(R.id.editTextfirstname);
-        lnametxt = (EditText) findViewById(R.id.editTextlastname);
-        unametxt = (EditText) findViewById(R.id.editTextusername);
-        pwdtxt = (EditText) findViewById(R.id.editTextpassword);
-        emailidtxt = (EditText) findViewById(R.id.editEmailid);
-        phnumtxt = (EditText) findViewById(R.id.editTextphnum);
-        addresstxt = (EditText) findViewById(R.id.editAddress);
-        gobackbtn = (Button) findViewById(R.id.gobackbutton);
-        newbtn = (Button) findViewById(R.id.newuserbutton);
-        radioGroup = (RadioGroup) findViewById(R.id.genderradioGroup);
+        fnametxt = findViewById(R.id.editTextfirstname);
+        lnametxt = findViewById(R.id.editTextlastname);
+        unametxt = findViewById(R.id.editTextusername);
+        pwdtxt = findViewById(R.id.editTextpassword);
+        emailidtxt = findViewById(R.id.editEmailid);
+        phnumtxt = findViewById(R.id.editTextphnum);
+        addresstxt = findViewById(R.id.editAddress);
+        gobackbtn = findViewById(R.id.gobackbutton);
+        newbtn = findViewById(R.id.newuserbutton);
+        radioGroup = findViewById(R.id.genderradioGroup);
 
         fnametxt.setFilters(new InputFilter[]{acceptonlyAlphabetValuesnotNumbersMethod()});
         lnametxt.setFilters(new InputFilter[]{acceptonlyAlphabetValuesnotNumbersMethod()});
-        //fnametxt.setKeyListener(DigitsKeyListener.getInstance("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"));
-        //lnametxt.setKeyListener(DigitsKeyListener.getInstance("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"));
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                radioButton = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+                radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
                 gender = radioButton.getText().toString();
             }
         });
@@ -114,7 +112,6 @@ public class NewUserActivity extends AppCompatActivity {
         newbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //customerid = customeridtxt.getText().toString();
                 fname = fnametxt.getText().toString();
                 lname = lnametxt.getText().toString();
                 uname = unametxt.getText().toString();
@@ -126,105 +123,103 @@ public class NewUserActivity extends AppCompatActivity {
                 Pattern pattern = Pattern.compile("^\\d{10}$");
                 Matcher matcher = pattern.matcher(phnum);
 
-                Pattern pwdpattern = Pattern.compile("/^[a-z0-9]{8}$/");
-                Matcher pwdmatcher = pwdpattern.matcher(pwd);
-
-
                 if (TextUtils.isEmpty(fname)) {
                     fnametxt.setError("FirstName is Empty");
-                    fnametxt.setFocusable(true);
-                } else if (TextUtils.isEmpty(lname)) {
+                    fnametxt.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(lname)) {
                     lnametxt.setError("LastName is Empty");
-                    lnametxt.setFocusable(true);
-                } else if (TextUtils.isEmpty(uname)) {
+                    lnametxt.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(uname)) {
                     unametxt.setError("UserName is Empty");
-                    unametxt.setFocusable(true);
-                } else if (TextUtils.isEmpty(pwd)) {
+                    unametxt.requestFocus();
+                    return;
+                }
+                if (!isValidUsername(uname)) {
+                    unametxt.setError("Username must be Alphanumeric Characters with special char, lenght 8-15 ");
+                    unametxt.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(pwd)) {
                     pwdtxt.setError("Password is Empty");
-                    pwdtxt.setFocusable(true);
+                    pwdtxt.requestFocus();
+                    return;
                 }
-                /*else if(!pwdmatcher.matches())
-                {
-                    pwdtxt.setError("Password should be 8 characters");
-                    pwdtxt.setFocusable(true);
-                }*/
-                //pwd validation is done
-                else if (TextUtils.isEmpty(phnum)) {
+                if (TextUtils.isEmpty(phnum)) {
                     phnumtxt.setError("PhoneNumber is Empty");
-                    phnumtxt.setFocusable(true);
-                } else if (!matcher.matches()) {
-                    phnumtxt.setError("PhoneNumber is Not Valid");
-                    phnumtxt.setFocusable(true);
-                }//phone number validation is done
-                else if (TextUtils.isEmpty(emailid)) {
-                    emailidtxt.setError("EmailId is Empty");
-                    emailidtxt.setFocusable(true);
-                } else if (!Patterns.EMAIL_ADDRESS.matcher(emailid).matches()) {
-                    emailidtxt.setError("EmailId is Not Valid");
-                    emailidtxt.setFocusable(true);
-                }//Email validation is done
-                else if (TextUtils.isEmpty(address)) {
-                    addresstxt.setError("Address is Empty");
-                    addresstxt.setFocusable(true);
-                } else {
-                    Log.d("UserName  : ", uname);
-                    Log.d("Email Id  : ", emailid);
-                    Log.d("Phone Num : ", phnum);
-                    Log.d("------------", "-------");
-                    FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef = database.getReference("Customer");
-                    myRef.addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            for (DataSnapshot SubSnapshot : snapshot.getChildren()) {
-                                NewUser newCustomer = SubSnapshot.getValue(NewUser.class);
-                                Log.d("------------", "-------");
-                                System.out.println("UserName : " + uname  + " " + newCustomer.getUsername() + " " +
-                                        uname.equals(newCustomer.getUsername()));
-                                System.out.println("UserName : " + emailid  + " " + newCustomer.getEmailid()+ " "+
-                                        emailid.equals(newCustomer.getEmailid()));
-                                System.out.println("UserName : " + phnum  + " " + newCustomer.getPhonenum()+ " "+
-                                        phnum.equals(newCustomer.getPhonenum()));
-                                if (uname.equals(newCustomer.getUsername()) || emailid.equals(newCustomer.getEmailid())
-                                        || phnum.equals(newCustomer.getPhonenum())) {
-                                    flag = true;
-                                    break;
-                                }
-                            }
-                        }
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-                    if (!flag) {
-                        DatabaseReference dbRef = database.getReference();
-                        dbRef = database.getReference("Customer");
-                        customerid = dbRef.push().getKey();
-                        NewUser newCustomer = new NewUser(customerid, fname, lname, uname, pwd, emailid, phnum,
-                                gender, address);
-                        //dbRef.child("Student").child(StudentId).setValue(student);
-                        //dbRef.child(StudentId).setValue(student);
-                        dbRef.child(customerid).setValue(newCustomer);
-
-                        Toast.makeText(NewUserActivity.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
-
-                        //customeridtxt.setText("");
-                        fnametxt.setText("");
-                        lnametxt.setText("");
-                        unametxt.setText("");
-                        pwdtxt.setText("");
-                        addresstxt.setText("");
-                        phnumtxt.setText("");
-                        emailidtxt.setText("");
-                    }
-                    else
-                    {
-                        Toast.makeText(NewUserActivity.this, "Duplicate UserName/PhoneNum/EmailId exists", Toast.LENGTH_LONG).show();
-                    }
+                    phnumtxt.requestFocus();
+                    return;
                 }
+                if (!matcher.matches()) {
+                    phnumtxt.setError("PhoneNumber is Not Valid");
+                    phnumtxt.requestFocus();
+                    return;
+                }
+
+                checkDuplicateAndInsert();
             }
         });
+    }
+
+    private void checkDuplicateAndInsert() {
+        duplicatesFound = 0; // Reset duplicates count
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Customer");
+        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot SubSnapshot : snapshot.getChildren()) {
+                    NewUser newCustomer = SubSnapshot.getValue(NewUser.class);
+                    if (newCustomer != null && (uname.equals(newCustomer.getUsername())
+                            || emailid.equals(newCustomer.getEmailid())
+                            || phnum.equals(newCustomer.getPhonenum()))) {
+                        duplicatesFound++;
+                    }
+                }
+                if (duplicatesFound == 0) {
+                    insertUserData();
+                } else {
+                    Toast.makeText(NewUserActivity.this, "UserName/PhoneNum already exists", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(NewUserActivity.this, "Database Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void insertUserData() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference dbRef = database.getReference("Customer");
+        customerid = dbRef.push().getKey();
+        NewUser newCustomer = new NewUser(customerid, fname, lname, uname, pwd, emailid, phnum,
+                gender, address);
+        dbRef.child(customerid).setValue(newCustomer);
+
+        Toast.makeText(NewUserActivity.this, "Data Inserted Successfully", Toast.LENGTH_LONG).show();
+
+        fnametxt.setText("");
+        lnametxt.setText("");
+        unametxt.setText("");
+        pwdtxt.setText("");
+        addresstxt.setText("");
+        phnumtxt.setText("");
+        emailidtxt.setText("");
+    }
+
+    private boolean isValidUsername(String username) {
+        // Regex pattern for the username validation
+        String regex = "^(?=.*[a-zA-Z])(?=.*[@#$%^&+=])(?=.*[0-9])(?=\\S+$).{8,15}$";
+        // Compile the regex pattern
+        Pattern pattern = Pattern.compile(regex);
+        // Create matcher object
+        Matcher matcher = pattern.matcher(username);
+        // Return true if the username matches the pattern, otherwise false
+        return matcher.matches();
     }
 }
